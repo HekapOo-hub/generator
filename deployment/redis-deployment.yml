@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-generator-service-redis
+spec:
+  selector:
+    matchLabels:
+      app: dev-generator-service-redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dev-generator-service-redis
+    spec:
+      containers:
+        - name: generator-redis
+          image: redis:latest
+
+
+

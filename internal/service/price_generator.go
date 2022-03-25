@@ -54,7 +54,7 @@ func (pg *PriceGenerator) send(msg map[string]interface{}) error {
 		},
 	}).Err()
 	if err != nil {
-		return fmt.Errorf("redis stream sending create human request error %w", err)
+		return fmt.Errorf("redis stream sending prices request error %w", err)
 	}
 	return nil
 }

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-generator-service
+  labels:
+    app: dev-generator-service
+spec:
+  selector:
+    matchLabels:
+      app: dev-generator-service
+  template:
+    metadata:
+      labels:
+        app: dev-generator-service
+    spec:
+      containers:
+        - name: dev-generator-service
+          image: vprokopenya/generator:latest
+          env:
+            - name: REDIS_ADDR
+              value: dev-generator-service-redis:6379

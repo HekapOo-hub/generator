@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-generator-service-redis
+spec:
+  selector:
+    app: dev-generator-service-redis
+  type: LoadBalancer
+  ports:
+    - port: 6379
+      targetPort: 6379

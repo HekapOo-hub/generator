@@ -7,8 +7,7 @@ import (
 
 const (
 	// RedisStream is a name of stream for RedisHumanCacheRepository to listen
-	RedisStream     = "prices"
-	RedisCashStream = "cash"
+	RedisStream = "prices"
 )
 
 // RedisConfig is used for connecting with redis db
